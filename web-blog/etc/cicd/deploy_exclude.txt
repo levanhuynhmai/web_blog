@@ -1,4 +1,0 @@
-.git/
-src/app/storage/
-src/node_modules/
-src/vendor/
