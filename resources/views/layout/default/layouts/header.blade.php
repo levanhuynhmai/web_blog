@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md fixed-top bg-white site-header navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{route('trangchu')}}">
         
             <img src="{{asset("layout/default/img/logo.png")}}" style="width:50px;" class="img-responsive" alt="logo">BLOG
             
@@ -12,16 +12,16 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                                     <li class="nav-item">
-                        <a class="nav-link" href="https://tweb.com.vn/affiliate">💵 Kiếm tiền online</a>
+                        <a class="nav-link" href="{{route('affiliate')}}">💵 Kiếm tiền online</a>
                     </li>
                                     <li class="nav-item">
-                        <a class="nav-link" href="https://tweb.com.vn/khuyen-mai">🔖 Domain &amp; Hosting</a>
+                        <a class="nav-link" href="{{route('host')}}">🔖 Domain &amp; Hosting</a>
                     </li>
                                     <li class="nav-item">
-                        <a class="nav-link" href="https://tweb.com.vn/chia-se-code">🚀 Chia sẽ code</a>
+                        <a class="nav-link" href="{{route('sharecode')}}">🚀 Chia sẽ code</a>
                     </li>
                                     <li class="nav-item">
-                        <a class="nav-link" href="https://tweb.com.vn/tool/facebook-text">🔠 Tool Facebook</a>
+                        <a class="nav-link" href="{{route('toolfb')}}">🔠 Tool Facebook</a>
                     </li>
                             </ul>
 

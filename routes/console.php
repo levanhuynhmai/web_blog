@@ -68,6 +68,7 @@ Route::middleware(['auth.console'])->group(function () {
     //post
     Route::delete('posts/destroy-multi', 'PostController@destroyMulti');
     Route::resource('posts', 'PostController');
+    Route::get('posts', 'PostController@index');
 
     // post tag
     Route::delete('post_tags/destroy-multi', 'PostTagController@destroyMulti');

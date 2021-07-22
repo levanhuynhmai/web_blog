@@ -39,37 +39,32 @@ class LoginController extends Controller
             'error' => session('error'),
         ];
 
-        return view('admin/login.index', $data);
+        return view('admin/dashboard.index', $data);
     }
 
-    public function auth(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
-        $condition = [
-            'email' => $credentials['email'],
-            'status' => User::STATUS_ACTIVE,
-        ];
+    // public function auth(Request $request)
+    // {
+    //     $credentials = $request->only('email', 'password');
+    //     $condition = [
+    //         'email' => $credentials['email'],
+    //         'status' => User::STATUS_ACTIVE,
+    //     ];
 
-        $myUser = User::query()->where($condition)->first();
+    //     $myUser = User::query()->where($condition)->first();
 
-        if (!empty($myUser) && $myUser->id > 0) {
-            if (Auth::guard('admin')->attempt($credentials)) {
-                $theme = ConfigService::getValue('theme_active');
-                $this->userService->initData($theme);
+    //     if (!empty($myUser) && $myUser->id > 0) {
+    //         if (Auth::guard('admin')->attempt($credentials)) {
+    //             $theme = ConfigService::getValue('theme_active');
+    //             $this->userService->initData($theme);
 
-                return redirect(admin_url('dashboard'))->withCookie(
-                    'theme',
-                    $theme,
-                    config('constant.COOKIE_EXPIRED'),
-                    '/'
-                );
-            } else {
-                $request->session()->flash('error', trans('user.login.error'));
-            }
-        } else {
-            $request->session()->flash('error', trans('user.login.not_exist'));
-        }
+    //             return view('admin/dashboard.index');
+    //         } else {
+    //             $request->session()->flash('error', trans('user.login.error'));
+    //         }
+    //     } else {
+    //         $request->session()->flash('error', trans('user.login.not_exist'));
+    //     }
 
-        return back()->withInput();
-    }
+    //     return back()->withInput();
+    // }
 }

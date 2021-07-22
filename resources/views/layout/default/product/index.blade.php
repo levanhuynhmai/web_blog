@@ -1,6 +1,6 @@
 @extends('layout.default.layouts.app')
 @section('content')
-<main class="container" style="height: auto !important; margin-top:130px; margin-bottom: 20px;">
+<main class="container" style="height: auto !important; margin-top:120px; margin-bottom: 20px;">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">

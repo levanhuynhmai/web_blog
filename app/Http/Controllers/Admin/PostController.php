@@ -51,7 +51,6 @@ class PostController extends AdminController
 
         return view('admin/post.index', $this->render($data));
     }
-
     public function create()
     {
         $data = [

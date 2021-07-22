@@ -1,10 +1,7 @@
 @extends('admin.layouts.app')
 @section('content')
     <!-- chart sale order -->
-    @if(\App\Models\SaleOrder::query()->count() > 0)
-        @include('admin.order.box_chart_report')
-    @endif
-
+    
     <div class="clearfix"></div>
 
     <div class="row">

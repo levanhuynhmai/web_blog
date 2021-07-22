@@ -14,5 +14,21 @@ class HomeController extends Controller
     function getchitiet(){
         return view('layout.default.product.index');
     }
+
+    function getaffiliate(){
+        return view('layout.default.page.affiliate');
+    }
+
+    function gethost(){
+        return view('layout.default.page.host');
+    }
+
+    function getsharecode(){
+        return view('layout.default.page.sharecode');
+    }
+
+    function gettoolfb(){
+        return view('layout.default.page.toolfb');
+    }
 }
 

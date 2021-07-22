@@ -18,13 +18,13 @@ class AdminController extends Controller
     {
         $this->page_number = config('constant.PAGE_NUMBER');
         $config = ConfigService::getConfig();
-
+        
         if (!empty($config['theme_active'])) {
             $this->theme = $config['theme_active'];
         }
-        $manifest = @json_decode(file_get_contents(public_path('layout/' . $this->theme . '/manifest.json')), true);
+        
         $this->data = [
-            'manifest' => $manifest,
+            
             'title' => env('APP_NAME'),
             'config' => $config,
             'theme' => $this->theme,
